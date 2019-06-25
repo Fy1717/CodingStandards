@@ -1,0 +1,228 @@
+1- Class Kullanýmý
+
+	public class HelloWorld
+	{ 
+		... 
+	} 
+
+-----------------------------------------------------------------------------
+
+2- Metod Kullanýmý
+
+	void SayHello(string name) 
+	{ 
+		... 
+	}
+
+-----------------------------------------------------------------------------
+
+3- Deðiþken Kullanýmý
+
+	int totalCount = 0;
+ 	void SayHello(string name) 
+	{ 
+		string fullMessage = "Hello " + name;
+ 		... 
+	} 
+
+-----------------------------------------------------------------------------
+
+4- Döngülerde Kullanýmý
+
+	for ( int i = 0; i < count; i++ ) 
+	{ 
+		... 
+	} 
+
+-----------------------------------------------------------------------------
+
+5- Boolean Deðiþken Kullanýmý
+
+	 private bool _isFinished 
+
+-----------------------------------------------------------------------------
+
+6- Yorum Satýrý Kullanýmý
+
+	   // Yorum Satýrý Normal Satýr ile Ayný Hizada ve 1 satýr Boþluklu
+	  
+	   string fullMessage = "Hello " + name;
+           DateTime currentTime = DateTime.Now;
+           string message = fullMessage + ", the time is : " + currentTime.ToShortTimeString();
+           MessageBox.Show ( message );
+
+-----------------------------------------------------------------------------
+
+7- Kelebek Parantez Kullanýmý 
+
+	if ( ... ) 
+	{
+		// ...
+		// Kelebek Parantez Tüm Bloklar Ýçin Alt Satýra Atlanarak 
+                // Ayný Hizadan Devam Edilir 
+                return false;
+ 	} 
+        return true;
+	 
+-----------------------------------------------------------------------------
+
+8- Satýr Boþluðu ile Mantýksal Gruplamalarýn Kullanýmý 
+
+	bool SayHello (string name)
+	{
+		// Deðiþken Tanýmlanýlan Grup
+
+		string fullMessage = "Hello " + name;
+ 		DateTime currentTime = DateTime.Now;	
+
+		// Mesaj Yayýnýnýn Hazýrlandýðý Grup		
+
+		string message = fullMessage + ", the time is : " + currentTime.ToShortTimeString();
+ 		MessageBox.Show ( message ); 
+
+		// Kontrol Bloðunun Ýþlendiði Grup
+
+		if ( ... ) 
+		{
+			// ...
+			// Kelebek Parantez Tüm Bloklar Ýçin Alt Satýra Atlanarak 
+                	// Ayný Hizadan Devam Edilir 
+                	return false;
+ 		} 
+
+        	return true;
+	}
+
+-----------------------------------------------------------------------------
+
+9- Metodlarýn Etkin ve Doðru Kullanýmý 
+
+	void SavePhoneNumber ( string phoneNumber ) 
+	{ 
+		// Telefon Kaydý Yapýlýyor .
+		// Amaca Uygun Olarak Ýsimlendirme Yapýlmalý . 
+		
+ 	} 
+
+-----------------------------------------------------------------------------
+
+10- Try-Catch Bloðu Kullanýmý 
+
+	void ReadFromFile ( string fileName ) 
+	{ 
+		try 
+		{ 
+			// Dosyadan Okuma Yapýlabildiðinde
+ 		} 
+		catch (FileIOException ex) 
+		{ 
+			// Hata türü belirtilmeli 
+ 			// Hata mesajý loglanmalý 
+			throw; 
+		} 
+	} 
+
+-----------------------------------------------------------------------------
+
+11- Görsel Baðdaþtýrmalar Ýçin Kullanýmlar
+
+
+	ELEMAN              Ön Eki
+	------------       ---------
+	Label               lbl 
+	TextBox             txt
+	DataGrid            dtg 
+	Button              btn 
+	ImageButton         imb 
+	Hyperlink           hlk 
+	DropDownList        ddl
+	ListBox             lst 
+	DataList            dtl 
+	Repeater            rep 
+	Checkbox            chk 
+	CheckBoxList        cbl
+	RadioButton         rdo
+	RadioButtonList     rbl
+	Image               img 
+	Panel               pnl
+	PlaceHolder         phd 
+	Table               tbl 
+	Validators          val 
+
+-----------------------------------------------------------------------------
+
+
+
+Yanlýþ Örnekler 
+-----------------------------------------------------------------------------
+
+
+	string m_sName;
+	int nAge; 
+	
+        ---------------------------------------------------------------------
+
+	string nam 
+	string addr
+        int sal 
+
+        ---------------------------------------------------------------------
+	
+	// Yorum Satýrý Boþluk Yanlýþlýðý
+		string fullMessage = "Hello " + name;
+		DateTime currentTime = DateTime.Now;
+ 		string message = fullMessage + ", the time is : " + currentTime.ToShortTimeString();
+ 		MessageBox.Show ( message ); 
+	
+
+        ---------------------------------------------------------------------
+	
+	bool SayHello (string name)
+	{
+		// Deðiþken Tanýmlanýlan Grup
+		string fullMessage = "Hello " + name;
+ 		DateTime currentTime = DateTime.Now;	
+		// Mesaj Yayýnýnýn Hazýrlandýðý Grup		
+		string message = fullMessage + ", the time is : " + currentTime.ToShortTimeString();
+ 		MessageBox.Show ( message ); 
+		// Kontrol Bloðunun Ýþlendiði Grup
+		if ( ... ) 
+		{
+			// GRUPLANMALAR ARASI BOÞLUKLAR ÖNEMSENMEMÝÞ 
+                	return false;
+ 		} 
+        	return true;
+	}
+
+        ---------------------------------------------------------------------
+
+	if ( ... ) { 
+		// Parantez Yanlýþ Yerde Kullanýlmamýþ
+	 } 
+
+        ---------------------------------------------------------------------
+
+	if(showResult==true) 
+	{ 
+		for(int       i= 0;i<10;i++) 
+		{
+			 // Döngü Ýçi Yazým Yanlýþlýðý (Boþluk)
+		} 
+	}
+
+	
+        ---------------------------------------------------------------------
+
+	SaveAddress ( address, email );
+        void SaveAddress ( string address, string email )
+        { 
+		// ÝÞ 1.
+ 		// Adres Kaydý 
+		// ... 
+		// ÝÞ 2. 
+		// Mail Gönderme  
+		// ... 
+		// Bir Metod Tek Bir Ýþ Yapmalý
+	} 
+
+-----------------------------------------------------------------------------
